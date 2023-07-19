@@ -1,6 +1,7 @@
 import streamlit
 import pandas
 
+pip install snowflake-connector-python
 
 
 
