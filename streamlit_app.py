@@ -51,6 +51,14 @@ my_data_row = my_cur.fetchall()
 streamlit.header("The Fruit Load List contains:")
 streamlit.dataframe(my_data_row)
 
+fruit_add = streamlit.text_input('What fruit would you like to add?')
+my_cnx = snowflake.connector.connect(**streamlit.secrets["snowflake"])
+my_cur = my_cnx.cursor()
+my_cur.execute("insert into PC_RIVERY_DB.PUBLIC.FRUIT_LOAD_LIST values ('" + fruit_add + "')")
+my_data_row = my_cur.fetchall()
+streamlit.header("The Fruit Load List contains:")
+streamlit.dataframe(my_data_row)
+
 
 
 
