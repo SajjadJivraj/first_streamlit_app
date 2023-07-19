@@ -1,1 +1,1 @@
-snowflake-connector-phyton
+snowflake-connector-python==3.0.4
