@@ -54,8 +54,9 @@ streamlit.dataframe(my_data_row)
 fruit_add = streamlit.text_input('What fruit would you like to add?')
 my_cnx1 = snowflake.connector.connect(**streamlit.secrets["snowflake"])
 my_cur1 = my_cnx1.cursor()
-my_cur1.execute("insert into PC_RIVERY_DB.PUBLIC.FRUIT_LOAD_LIST values ('" + fruit_add + "')")
-streamlit.write('The user added ', fruit_add)
+streamlit.write('Thanks for adding', fruit_add)
+my_cur1.execute("insert into PC_RIVERY_DB.PUBLIC.FRUIT_LOAD_LIST values ('from streamlist')")
+
 
 
 
