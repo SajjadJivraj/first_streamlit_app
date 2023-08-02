@@ -6,7 +6,6 @@ from urllib.error import URLError
 
 streamlit.title('Zena\'s Amazing Athleisure Catalog')
 
-# streamlit.title('My Parents New Healthy Diner')
 
 streamlit.title('Zena\'s Amazing Athleisure Catalog')
 # connect to snowflake
